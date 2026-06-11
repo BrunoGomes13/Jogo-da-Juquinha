@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Juquinha na Caatinga</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <img src="fotos/juquinha-header.png" alt="" />
+  <div>
+    <h1>Juquinha na Caatinga</h1>
+    <p>Museu • Aventura 2D</p>
+  </div>
+</header>
+
+<div id="wrap">
+  <canvas id="game" width="800" height="480"></canvas>
+
+  <div class="hud" id="hud">
+    <div>
+      <div class="pill">🪙 <span id="score">0</span></div>
+      <div class="pill">❤️ <span id="lives">3</span></div>
+    </div>
+    <div><div class="pill run hidden" id="runPill">⚡ CORRENDO</div></div>
+    <div><button class="btn" id="pauseBtn">⏸</button></div>
+  </div>
+
+  <div class="overlay start" id="startScreen">
+    <video id="introVideo" src="videos/intro.mp4" autoplay loop playsinline preload="auto"></video>
+    <button class="play-btn" id="startBtn">▶ JOGAR</button>
+  </div>
+
+  <div class="overlay over hidden" id="overScreen">
+    <h2 style="color:#fecaca">GAME OVER</h2>
+    <p>Pontuação: <span id="overScore">0</span></p>
+    <button class="play-btn" id="retryBtn">Tentar de novo</button>
+  </div>
+
+  <div class="overlay win hidden" id="winScreen">
+    <video id="thanksVideo" src="videos/thanks.mp4" loop controls playsinline preload="auto"></video>
+    <h2 style="color:#a7f3d0">Obrigada por me ajudar!</h2>
+    <p>Você guiou a Juquinha em segurança pela Caatinga. 🌵🐍 — Pontuação: <span id="winScore">0</span></p>
+    <button class="play-btn" id="winBtn">Jogar de novo</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
